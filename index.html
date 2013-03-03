@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+
+<meta charset='utf-8' />
+<title>GraphVerse</title>
+
+<script>
+var gp_options = new Array();
+gp_options[''] = '';
+</script>
+
+<link id='css-styles' href='css/styles.css' rel='stylesheet'>
+
+<script id='js-jquery' src='js/jquery.js'></script>
+<script id='js-graphverse' src='js/graphverse.js'></script>
+
+</head>
+
+<body>
+
+	<form class="graphverse" data-action="put">
+		<h3>Add node to graph:</h3>
+		<input type="text" placeholder="name" name="name" class="graph-text" />
+		<input type="submit" value="add" />
+	</form>
+
+	<form class="graphverse" data-action="get">
+		<h3>Get node from graph:</h3>
+		<input type="text" placeholder="node" class="graph-node" /><br />
+		<input type="text" placeholder="data type" class="graph-data" />
+		<input type="submit" value="get" />
+	</form>
+
+</body>
+
+<script>
+
+$(document).ready(function(e){
+	$('body').GraphVerse();
+})
+
+</script>
+
+</html>
